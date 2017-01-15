@@ -21,10 +21,10 @@ public class AppConfig {
 	public DataSource getOracleDataSource()
 	{
 		BasicDataSource dataSource=new BasicDataSource();
-		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUrl("jdbc:h2:~/VicharBACKEND");
+		dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
 		dataSource.setUsername("sa");
-		dataSource.setPassword("");
+		dataSource.setPassword("sa");
 		
 		return dataSource;
 		
@@ -37,7 +37,7 @@ public class AppConfig {
 		LocalSessionFactoryBean sessionFactory=new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 		sessionFactory.setHibernateProperties(getHibernateProperties());
-		sessionFactory.setPackagesToScan(new String[] {"com.niit.angularauth.backend.model"});
+		sessionFactory.setPackagesToScan(new String[] {"com.vichar.VicharBACKEND.model"});
 	
 		return sessionFactory;
 	}

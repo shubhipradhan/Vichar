@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.vichar.VicharBACKEND.dao.UserDAO;
 import com.vichar.VicharBACKEND.model.User;
 
-@Repository
+@Repository("userDAO")
 @EnableTransactionManagement
 @Transactional
 public class UserDAOImpl implements UserDAO{

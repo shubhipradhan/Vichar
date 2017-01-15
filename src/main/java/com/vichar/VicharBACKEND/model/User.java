@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USERDETAILS", schema="VicharBACKEND")
+@Table(name="USERDETAILS", schema="Vichar")
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
